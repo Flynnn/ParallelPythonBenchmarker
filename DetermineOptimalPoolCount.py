@@ -15,7 +15,7 @@ def Main():
 	print("This test will take approximately %0.1f minutes" % (maxDepth * 10/60))
 	maxn = 0
 	maxResult = 0
-	for n in range(1, 3 + 1):
+	for n in range(1, maxDepth + 1):
 		print("Performing round at pool depth %i. %i tests remaining." % (n, maxDepth - n + 1))
 		result = TestNProc(n)
 		print("At this pool depth you achieve %0.1f hops/s (that's %0.1f hops/(s * worker)" % (result, (result/n)))
